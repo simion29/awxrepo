@@ -1,0 +1,13 @@
+---
+- hosts: all
+
+  tasks: 
+
+    - name: Ping hosts
+      ping:
+      register: test
+
+
+    - name: debug
+      debug:
+        msg: "{{ test }}"
